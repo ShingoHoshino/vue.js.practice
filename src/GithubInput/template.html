@@ -1,0 +1,14 @@
+<!-- 
+     v-on:submit.prevent="onSubmit"は、フォームが送信されたときにonSubmitメソッドが実行されるようにセットする。
+     .preventを加えでデフォルト処理の実行を防ぐ。
+     もしVueに.preventが無かったら、event.preventDefault()を使うが、Vueの機能を使うほうが良い。
+-->
+<!--
+     v-model:usernameは、入力された値をコード中のusernameの値とバインドしている。
+     先にGithubInputを作ったとき、usernameというデータを持つよう宣言したが、
+     いまここでデータと入力欄とが結びついた。これでこの2つは常に自動で同期される。
+-->
+<form v-on:submit.prevent="onSubmit">
+  <input type="text" v-model="username" placeholder="Enter a github username here" />
+  <button type="submit">Go!</button>
+</form>
