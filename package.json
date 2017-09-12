@@ -1,0 +1,28 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --colors --require babel-register test/main.js || exit 0",
+    "watch": "webpack -d --watch --colors || exit 0",
+    "server": "browser-sync start --server dist --serverStatic dist --files dist/* || exit 0",
+    "build": "webpack -p --progress --colors || exit 0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "vue-template-compiler": "^2.4.2",
+    "webpack": "^3.5.6"
+  },
+  "dependencies": {
+    "vue": "^2.4.2",
+    "vue-loader": "^13.0.4"
+  }
+}
